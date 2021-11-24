@@ -1,4 +1,4 @@
-Public repository containing examples from my Medium posts.
+Public repository containing examples for my Medium posts.
 
 ## Posts
 | #  | Post | Folder |
