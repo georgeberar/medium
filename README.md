@@ -1,2 +1,1 @@
-# medium
-Public repository containing examples from my Medium posts
+Public repository containing examples from my Medium posts.
