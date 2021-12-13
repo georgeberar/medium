@@ -37,7 +37,7 @@ import static java.util.Collections.singletonList;
 import static java.util.stream.Collectors.toList;
 
 /**
- * Global API error handler responsible of catching any uncaught {@link Exception} and converting it into a prettier
+ * Global API exception handler responsible of catching any uncaught {@link Exception} and converting it into a prettier
  * JSON response.
  */
 @Order(Ordered.HIGHEST_PRECEDENCE)
