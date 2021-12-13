@@ -11,8 +11,6 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.HttpMessageNotReadableException;
-import org.springframework.security.access.AccessDeniedException;
-import org.springframework.security.core.AuthenticationException;
 import org.springframework.web.HttpRequestMethodNotSupportedException;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.MissingPathVariableException;
@@ -91,38 +89,6 @@ public class GlobalApiExceptionHandler extends ResponseEntityExceptionHandler {
         log(ex, request);
         final ErrorResponseDto errorResponseDto = build(ex.getCode(), ex.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(errorResponseDto);
-    }
-
-    /**
-     * Handles the uncaught {@link AuthenticationException} exceptions and returns a JSON formatted response.
-     *
-     * @param ex      the ex
-     * @param request the request on which the ex occurred
-     * @return a JSON formatted response containing the ex details and additional fields
-     */
-    @ExceptionHandler(value = {AuthenticationException.class})
-    public ResponseEntity<Object> handleAuthenticationException(final AuthenticationException ex,
-                                                                final ServletWebRequest request) {
-        log(ex, request);
-        final ErrorResponseDto errorResponseDto = build(AuthenticationException.class.getSimpleName(), ex.getMessage(),
-                HttpStatus.UNAUTHORIZED);
-        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(errorResponseDto);
-    }
-
-    /**
-     * Handles the uncaught {@link AccessDeniedException} exceptions and returns a JSON formatted response.
-     *
-     * @param ex      the ex
-     * @param request the request on which the ex occurred
-     * @return a JSON formatted response containing the ex details and additional fields
-     */
-    @ExceptionHandler(value = {AccessDeniedException.class})
-    public ResponseEntity<Object> handleAccessDeniedException(final AccessDeniedException ex,
-                                                              final ServletWebRequest request) {
-        log(ex, request);
-        final ErrorResponseDto errorResponseDto = build(AccessDeniedException.class.getSimpleName(), ex.getMessage(),
-                HttpStatus.FORBIDDEN);
-        return ResponseEntity.status(HttpStatus.FORBIDDEN).body(errorResponseDto);
     }
 
     /**
