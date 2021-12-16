@@ -27,9 +27,15 @@ public class ToDosV1Boundary {
 
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(OK)
-    public ResponseEntity<List<ToDoDetailsResponseDto>> findAll(@RequestParam(value = "partial_title", required = false) final String partialTitle) {
+    public ResponseEntity<List<ToDoDetailsResponseDto>> findAll(@RequestParam(value = "partial_title", required = false) final String partialTitle,
+                                                                @RequestParam(value = "like_partial_title", required = false) final String likePartialTitle,
+                                                                @RequestParam(value = "starting_partial_title", required = false) final String startingPartialTitle) {
         if (StringUtils.hasText(partialTitle)) {
             return ResponseEntity.status(OK).body(this.toDoControl.findAll(partialTitle));
+        } else if (StringUtils.hasText(likePartialTitle)) {
+            return ResponseEntity.status(OK).body(this.toDoControl.findAllLike(likePartialTitle));
+        } else if (StringUtils.hasText(startingPartialTitle)) {
+            return ResponseEntity.status(OK).body(this.toDoControl.findAllStartingWith(startingPartialTitle));
         }
         return ResponseEntity.status(OK).body(this.toDoControl.findAll());
     }
