@@ -1,0 +1,20 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/todo-db-local
+    username: postgres
+    password: postgres
+    hikari:
+      schema: todo
+  flyway:
+    baseline-on-migrate: true
+    user: postgres
+    password: postgres
+    schemas:
+      - todo
+
+db:
+  flyway:
+    clean: true
