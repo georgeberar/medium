@@ -40,6 +40,8 @@ public class ToDo {
 
     private String title;
 
+    private Boolean active;
+
     @Column(name = "created_at", updatable = false)
     private LocalDateTime createdAt;
 

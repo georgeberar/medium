@@ -16,6 +16,7 @@ public class ToDoDetailsResponseDto {
 
     private String extRef;
     private String title;
+    private Boolean active;
     private LocalDateTime created;
     private LocalDateTime updated;
 

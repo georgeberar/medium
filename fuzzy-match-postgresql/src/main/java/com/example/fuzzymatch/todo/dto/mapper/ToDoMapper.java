@@ -12,6 +12,7 @@ public interface ToDoMapper {
     @Mappings({
             @Mapping(target = "extRef", source = "extRef"),
             @Mapping(target = "title", source = "title"),
+            @Mapping(target = "active", source = "active"),
             @Mapping(target = "created", source = "createdAt"),
             @Mapping(target = "updated", source = "updatedAt")
     })

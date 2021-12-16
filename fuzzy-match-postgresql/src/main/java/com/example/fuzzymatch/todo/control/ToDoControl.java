@@ -26,11 +26,11 @@ public class ToDoControl {
     @PostConstruct
     @Transactional
     public void initData() {
-        final ToDo cleanHouse = ToDo.builder().extRef(UUID.randomUUID().toString()).title("Clean House").build();
-        final ToDo cleanCar = ToDo.builder().extRef(UUID.randomUUID().toString()).title("Clean Car").build();
-        final ToDo doHomework = ToDo.builder().extRef(UUID.randomUUID().toString()).title("Do Homework").build();
-        final ToDo goShopping = ToDo.builder().extRef(UUID.randomUUID().toString()).title("Go Shopping").build();
-        final ToDo goToSleep = ToDo.builder().extRef(UUID.randomUUID().toString()).title("Go To Sleep").build();
+        final ToDo cleanHouse = ToDo.builder().extRef(UUID.randomUUID().toString()).title("Clean House").active(true).build();
+        final ToDo cleanCar = ToDo.builder().extRef(UUID.randomUUID().toString()).title("Clean Car").active(true).build();
+        final ToDo doHomework = ToDo.builder().extRef(UUID.randomUUID().toString()).title("Do Homework").active(true).build();
+        final ToDo goShopping = ToDo.builder().extRef(UUID.randomUUID().toString()).title("Go Shopping").active(true).build();
+        final ToDo goToSleep = ToDo.builder().extRef(UUID.randomUUID().toString()).title("Go To Sleep").active(true).build();
         this.toDoRepository.saveAll(Arrays.asList(cleanHouse, cleanCar, doHomework, goShopping, goToSleep));
     }
 

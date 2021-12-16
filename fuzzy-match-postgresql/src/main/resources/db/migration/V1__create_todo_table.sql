@@ -9,6 +9,7 @@ CREATE TABLE t_todo
     id         BIGINT                 NOT NULL DEFAULT nextval('todo_id_seq'),
     ext_ref    CHARACTER VARYING(255) NOT NULL,
     title      CHARACTER VARYING(255) NOT NULL,
+    active     BOOLEAN                NOT NULL DEFAULT TRUE,
     created_at TIMESTAMP              NOT NULL DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP              NOT NULL DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (id),
