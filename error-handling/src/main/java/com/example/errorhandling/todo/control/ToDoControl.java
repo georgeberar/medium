@@ -10,8 +10,10 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Optional;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 import static com.example.errorhandling.exception.BusinessExceptionReason.TODO_NOT_FOUND_BY_EXT_REF;
 
@@ -43,6 +45,10 @@ public class ToDoControl {
         if (!todos.removeIf(todo -> extRef.equals(todo.getExtRef()))) {
             throw new BusinessException(TODO_NOT_FOUND_BY_EXT_REF);
         }
+    }
+
+    public List<ToDoDetailsResponseDto> findAll() {
+        return todos.stream().map(this.toDoMapper::toDoToToDoDetailsResponseDto).collect(Collectors.toList());
     }
 
 }

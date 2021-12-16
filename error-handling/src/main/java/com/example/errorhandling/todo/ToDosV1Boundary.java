@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
 import javax.validation.constraints.NotEmpty;
+import java.util.List;
 
 import static org.springframework.http.HttpStatus.CREATED;
 import static org.springframework.http.HttpStatus.NO_CONTENT;
@@ -51,4 +52,9 @@ public class ToDosV1Boundary {
         return ResponseEntity.status(NO_CONTENT).build();
     }
 
+    @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseStatus(OK)
+    public ResponseEntity<List<ToDoDetailsResponseDto>> findAll() {
+        return ResponseEntity.status(OK).body(this.toDoControl.findAll());
+    }
 }
