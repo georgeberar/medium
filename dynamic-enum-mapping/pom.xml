@@ -10,7 +10,7 @@
 		<relativePath/>
 	</parent>
 
-	<groupId>com.example.enummapping</groupId>
+	<groupId>com.example.mappings</groupId>
 	<artifactId>enum-mapping</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>enum-mapping</name>
