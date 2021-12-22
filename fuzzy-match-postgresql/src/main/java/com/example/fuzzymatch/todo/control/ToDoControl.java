@@ -27,7 +27,7 @@ public class ToDoControl {
     @Transactional
     public void initData() {
         final ToDo cleanHouse = ToDo.builder().extRef(UUID.randomUUID().toString()).title("Clean House").active(true).build();
-        final ToDo cleanCar = ToDo.builder().extRef(UUID.randomUUID().toString()).title("Clean Car").active(true).build();
+        final ToDo cleanCar = ToDo.builder().extRef(UUID.randomUUID().toString()).title("Klean Car").active(true).build();
         final ToDo doHomework = ToDo.builder().extRef(UUID.randomUUID().toString()).title("Do Homework").active(true).build();
         final ToDo goShopping = ToDo.builder().extRef(UUID.randomUUID().toString()).title("Go Shopping").active(true).build();
         final ToDo goToSleep = ToDo.builder().extRef(UUID.randomUUID().toString()).title("Go To Sleep").active(true).build();
@@ -41,13 +41,8 @@ public class ToDoControl {
                 .collect(Collectors.toList());
     }
 
-    public List<ToDoDetailsResponseDto> findAllLike(final String partialTitle) {
-        return this.toDoRepository.findByTitleLike(partialTitle).stream().map(this.toDoMapper::toDoToToDoDetailsResponseDto)
-                .collect(Collectors.toList());
-    }
-
-    public List<ToDoDetailsResponseDto> findAllStartingWith(final String partialTitle) {
-        return this.toDoRepository.findByTitleStartingWith(partialTitle).stream().map(this.toDoMapper::toDoToToDoDetailsResponseDto)
+    public List<ToDoDetailsResponseDto> findAllContaining(final String partialTitle) {
+        return this.toDoRepository.findByTitleContainingIgnoreCase(partialTitle).stream().map(this.toDoMapper::toDoToToDoDetailsResponseDto)
                 .collect(Collectors.toList());
     }
 
