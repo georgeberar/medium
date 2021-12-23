@@ -1,6 +1,6 @@
 # Standardized API Exception Handling
 
-The code base for [SpringBoot: Standardized API Exception Handling](https://medium.com/@georgeberar.contact/f31510861350) article.
+The code base for [SpringBoot: Standardized API Exception Handling](https://medium.com/@georgeberar.contact/springboot-standardized-api-exception-handling-f31510861350) article.
 
 ## Getting Started
 
