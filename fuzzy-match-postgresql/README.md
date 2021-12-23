@@ -1,6 +1,6 @@
-# Fuzzy Match with PostgreSQL
+# Fuzzy Match With Postgres
 
-The code base for [SpringBoot: Fuzzy Match with PostgreSQL]("") article.
+The code base for [SpringBoot: Fuzzy Match With Postgres](https://medium.com/@georgeberar.contact/springboot-fuzzy-match-with-postgres-8eb6bfd17b58) article.
 
 ## Getting Started
 
@@ -10,14 +10,14 @@ Start the application using your favorite dev tool (IntelliJ or Eclipse) or with
 > **8080** is used as running port
 
 ### Test
-To test the API you can do requests to one of the following endpoints:
+To test the API you can do requests to one of the following:
 - ``GET http://localhost:8080/api/v1/todos`` for getting TODOs
 - ``GET http://localhost:8080/api/v1/todos?partial_title=Go`` for getting TODOs which match a partial given title
 
-For example getting all TODOs which start with `Clean`:  
+For example getting all TODOs which are similar to `Clean`:  
 
 **Request**  
-``GET http://localhost:8080/api/v1/todos?partial_title=Go``
+``GET http://localhost:8080/api/v1/todos?partial_title=Clean``
 
 **Response**  
 ```
@@ -30,9 +30,11 @@ For example getting all TODOs which start with `Clean`:
     },
     {
         "extRef": "398f74ed-ff30-4f5a-95db-e904f3de1963",
-        "title": "Clean Car",
+        "title": "Klean Car",
         "created": "2021-12-16T11:49:13.739515",
         "updated": "2021-12-16T11:49:13.739515"
     }
 ]
 ```
+
+> Note: the **extRef** changes every single time you start the app and leave the `db.flyway.clean` property with value **true**
