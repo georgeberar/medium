@@ -49,7 +49,7 @@ In order to generate a valid token using Postman we need to do an update to our 
 and specify a custom **Authorized redirect URI**. Open the OAuth Client and add https://www.getpostman.com/oauth2/callback
 as value: 
 
-![Scheme](markdown/images/postman_as_callback.png)
+![Scheme](markdown/images/postman_as_callback.PNG)
 
 
 ### Configure Postman
@@ -57,7 +57,7 @@ as value:
 In order to be able to generate tokens using our Google OAuth Client we need to configure Postman for recognizing our
 authorized redirect URI. Open Postman > New Request > Authorization > Select OAuth 2.0:
 
-![Scheme](markdown/images/postman_configuration.png)
+![Scheme](markdown/images/postman_configuration.PNG)
 
 Make sure you put https://www.getpostman.com/oauth2/callback as **Callback URL** and your correct
 client credentials.  
@@ -65,7 +65,7 @@ client credentials.
 Clicking **Get New Access Token** button should open a pop-up where you need to provide the credentials
 for one of your test users. If the credentials are valid you should see something like:  
 
-![Scheme](markdown/images/postman_token.png)
+![Scheme](markdown/images/postman_token.PNG)
 
 > Note: copy the value of **id_token** because we need it later
 
@@ -78,9 +78,9 @@ Start the application using your favorite dev tool (IntelliJ or Eclipse) or with
 
 Executing `GET http://localhost/api/v1/hello` without the token gives us `401`:
 
-![Scheme](markdown/images/call_without_bearer.png)
+![Scheme](markdown/images/call_without_bearer.PNG)
 
 After adding the **Bearer** authorization token and use the previous copied **id_token** gives us
 `200 OK`:
 
-![Scheme](markdown/images/call_with_bearer.png)
+![Scheme](markdown/images/call_with_bearer.PNG)
