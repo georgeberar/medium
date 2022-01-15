@@ -1,6 +1,6 @@
 # Resource Server Integration with Google OAuth2
 
-The code base for [SpringBoot: Resource Server Integration With Google OAuth2]() article.
+The code base for [SpringBoot: API Authentication Using OAuth2 With Google](https://medium.com/@georgeberar.contact/springboot-api-authentication-using-oauth2-with-google-655b8759f0ac) article.
 
 ## Getting Started
 
