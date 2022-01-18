@@ -1,6 +1,6 @@
 # Rule Engine For Classifying Celestial Objects
 
-The code base for [SpringBoot: Rule Engine For Classifying Celestial Objects]() article.
+The code base for [SpringBoot: Rule Engine For Classifying Celestial Objects](https://medium.com/@georgeberar.contact/springboot-rule-engine-for-classifying-celestial-objects-6af6d4f824a6) article.
 
 ## Getting Started
 
