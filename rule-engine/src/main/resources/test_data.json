@@ -1,0 +1,23 @@
+[
+  // Black-Hole
+  {
+    "name": "Kepler",
+    "mass": 3.65e29,
+    "equatorialDiameter": 184502000,
+    "surfaceTemperature": 4800
+  },
+  // Planet
+  {
+    "name": "Kepler",
+    "mass": 1.87532418e27,
+    "equatorialDiameter": 14010000,
+    "surfaceTemperature": 300
+  },
+  // Star
+  {
+    "name": "Kepler",
+    "mass": 3.4164e28,
+    "equatorialDiameter": 9.94e8,
+    "surfaceTemperature": 3500
+  }
+]

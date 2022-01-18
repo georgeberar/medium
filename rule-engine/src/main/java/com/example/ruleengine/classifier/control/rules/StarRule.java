@@ -36,5 +36,4 @@ public class StarRule implements Rule {
         };
     }
 
-
 }
