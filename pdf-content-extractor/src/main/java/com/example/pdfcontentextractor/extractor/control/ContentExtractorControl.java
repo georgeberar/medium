@@ -11,13 +11,14 @@ import org.springframework.web.multipart.MultipartFile;
 public class ContentExtractorControl {
 
     public String extractContent(final MultipartFile multipartFile) {
-        String text = "";
+        String text;
 
         try (final PDDocument document = PDDocument.load(multipartFile.getInputStream())) {
             final PDFTextStripper pdfStripper = new PDFTextStripper();
             text = pdfStripper.getText(document);
         } catch (final Exception ex) {
             log.error("Error parsing PDF", ex);
+            text = "Error parsing PDF";
         }
 
         return text;
