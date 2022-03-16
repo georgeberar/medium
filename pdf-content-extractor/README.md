@@ -1,5 +1,7 @@
 # PDF Content Extractor
 
+The code base for [SpringBoot: Extract Text From PDF]() article.
+
 ## Getting Started
 
 ### Start
@@ -10,6 +12,10 @@ Start the application using your favorite dev tool (IntelliJ or Eclipse) or with
 
 ### Test
 
+To test the API you can do requests to the following endpoint:
 
+![Scheme](assets/extractor_response.png)
+
+> Note: use the resources/**hello_world.pdf** file as input test data
 
 
