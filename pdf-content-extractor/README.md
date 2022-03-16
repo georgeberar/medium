@@ -1,6 +1,6 @@
-# PDF Content Extractor
+# Extract Text From PDF
 
-The code base for [SpringBoot: Extract Text From PDF]() article.
+The code base for [SpringBoot: Extract Text From PDF](https://medium.com/@georgeberar/springboot-extract-text-from-pdf-1d8d41b5adac) article.
 
 ## Getting Started
 
