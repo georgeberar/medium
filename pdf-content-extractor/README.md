@@ -14,7 +14,7 @@ Start the application using your favorite dev tool (IntelliJ or Eclipse) or with
 
 To test the API you can do requests to the following endpoint:
 
-![Scheme](/assets/extractor_response.PNG)
+![Scheme](assets/extractor_response.PNG)
 
 > Note: use the resources/**hello_world.pdf** file as input test data
 
