@@ -1,6 +1,6 @@
 # Generate OpenAPI Document During Test Phase
 
-The code base for [Generate OpenAPI Document During Test Phase]() article.
+The code base for [SpringBoot: Generate OpenAPI Document During Test Phase](https://medium.com/@georgeberar/springboot-generate-openapi-document-during-test-phase-a3a793a50dfe) article.
 
 ## Getting Started
 
