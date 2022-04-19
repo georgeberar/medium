@@ -1,0 +1,115 @@
+openapi: 3.0.1
+info:
+  title: OpenAPI definition
+  version: v0
+servers:
+- url: http://localhost
+  description: Generated server url
+tags:
+- name: TODOs
+  description: Manage TODOs
+paths:
+  /api/v1/todos:
+    get:
+      tags:
+      - TODOs
+      summary: Get TODOs
+      operationId: getAll
+      responses:
+        "200":
+          description: The TODOs are returned successfully
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ToDoDetailsResponseDto'
+  /api/v1/todos/{id}:
+    get:
+      tags:
+      - TODOs
+      summary: Get TODO by id
+      operationId: getById
+      parameters:
+      - name: id
+        in: path
+        description: The id of the TODO
+        required: true
+        schema:
+          type: string
+          format: uuid
+        example: 00000000-00000000-00000000-00000000
+      responses:
+        "200":
+          description: The TODO is returned successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ToDoDetailsResponseDto'
+        "404":
+          description: TODO not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponseDto'
+    delete:
+      tags:
+      - TODOs
+      summary: Delete TODO by id
+      operationId: delete
+      parameters:
+      - name: id
+        in: path
+        description: The id of the TODO
+        required: true
+        schema:
+          type: string
+          format: uuid
+        example: 00000000-00000000-00000000-00000000
+      responses:
+        "204":
+          description: The TODO is deleted successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ToDoDetailsResponseDto'
+        "404":
+          description: TODO not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponseDto'
+components:
+  schemas:
+    ToDoDetailsResponseDto:
+      type: object
+      properties:
+        id:
+          type: string
+          description: The id of the TODO
+          format: uuid
+        title:
+          type: string
+          description: The title of the TODO
+          example: Clean House
+        done:
+          type: boolean
+          description: The status of the TODO
+          example: true
+    ErrorResponseDto:
+      type: object
+      properties:
+        code:
+          type: string
+          description: The unique identifier of the error
+        message:
+          type: string
+          description: The detailed description of the error
+        status:
+          type: integer
+          description: The HTTP status associated with the error
+          format: int32
+        timestamp:
+          type: string
+          description: The timestamp when the error occurred
+          format: date-time
