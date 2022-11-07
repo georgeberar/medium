@@ -10,4 +10,4 @@ Public repository containing examples for my Medium posts.
 | 5  | [SpringBoot: Rule Engine For Classifying Celestial Objects](https://medium.com/@georgeberar.contact/springboot-rule-engine-for-classifying-celestial-objects-6af6d4f824a6) | `rule-engine` |
 | 6  | [SpringBoot: Extract Text From PDF](https://medium.com/@georgeberar/springboot-extract-text-from-pdf-1d8d41b5adac) | `pdf-content-extractor` |
 | 7  | [SpringBoot: Generate OpenAPI Document During Test Phase](https://medium.com/@georgeberar/springboot-generate-openapi-document-during-test-phase-a3a793a50dfe) | `openapi` |
-| 8  | [Speed Up Backend Development With WireMock And Docker](https://medium.com/@georgeberar/springboot-generate-openapi-document-during-test-phase-a3a793a50dfe) | `wiremock-docker` |
+| 8  | [Speed Up Backend Development With WireMock And Docker](https://medium.com/@georgeberar/speed-up-backend-development-with-wiremock-and-docker-5dc2eaadd9d9) | `wiremock-docker` |

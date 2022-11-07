@@ -1,6 +1,6 @@
 # Speed Up Backend Development With WireMock And Docker
 
-The code base for [Speed Up Backend Development With WireMock And Docker](https://medium.com/@georgeberar.contact/springboot-standardized-api-exception-handling-f31510861350) article.
+The code base for [Speed Up Backend Development With WireMock And Docker](https://medium.com/@georgeberar/speed-up-backend-development-with-wiremock-and-docker-5dc2eaadd9d9) article.
 
 ## Getting Started
 
