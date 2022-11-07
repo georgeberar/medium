@@ -5,7 +5,7 @@ The code base for [Speed Up Backend Development With WireMock And Docker](https:
 ## Getting Started
 
 ### Start
-Start the mocked TODO service Docker compose command ``docker-compose up``.
+Start the mocked TODO service using Docker compose command ``docker-compose up``.
 
 > **8383** is used as running port
 
