@@ -1,0 +1,10 @@
+version: '3.9'
+
+services:
+  todo-service:
+    image: wiremock/wiremock:2.32.0
+    container_name: todo-service
+    volumes:
+      - ./local-setup:/home/wiremock
+    ports:
+      - 8383:8080

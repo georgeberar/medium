@@ -1,0 +1,19 @@
+{
+  "priority": 1,
+  "request": {
+    "method": "GET",
+    "urlPathPattern": "/api/v1/todos/d8b25784-c16f-449a-9006-6972e8a9111b"
+  },
+  "response": {
+    "status": 200,
+    "jsonBody": {
+      "id": "d8b25784-c16f-449a-9006-6972e8a9111b",
+      "title": "Clean House",
+      "active": true,
+      "created": "2022-04-11"
+    },
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

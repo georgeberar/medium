@@ -1,0 +1,26 @@
+{
+    "request": {
+        "method": "GET",
+        "urlPathPattern": "/api/v1/todos"
+    },
+    "response": {
+        "status": 200,
+        "jsonBody": [
+            {
+                "id": "d8b25784-c16f-449a-9006-6972e8a9111b",
+                "title": "Clean House",
+                "active": true,
+                "created": "2022-04-11"
+            },
+            {
+                "id": "38ab7f0f-0cdc-4643-8cdb-42acf7d1a4c4",
+                "title": "Clean Car",
+                "active": true,
+                "created": "2022-04-12"
+            }
+        ],
+        "headers": {
+            "Content-Type": "application/json"
+        }
+    }
+}
